@@ -51,11 +51,17 @@ $ cd <path to ytqueue>
 $ python ytqueue.py
 ```
 
+Open your browser and navigate to `localhost:8000`.
+
+Your co-workers in the same network should also be able to view
+the page as well by navigating to `youripaddress:8000`.
+
+To see your ip address, run `ifconfig` or `ip addr` in your
+favorite terminal emulator.
+
 
 Contributing
 ------------
 
 Fork it up, write your changes, submit a pull request and 
-write a 500 word essay on why should I include your changes.
-
-Jk.
+write a 1500 word essay on why should I include your changes. Jk.
