@@ -31,7 +31,7 @@ Installation
 Clone the repo
 
 ```
-git clone
+$ git clone git://github.com/jpanganiban/ytqueue.git
 ```
 
 Install the requirements
