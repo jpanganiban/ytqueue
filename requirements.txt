@@ -1,0 +1,9 @@
+Flask==0.9
+Jinja2==2.7
+MarkupSafe==0.18
+Werkzeug==0.8.3
+distribute==0.6.34
+gevent==0.13.8
+gevent-subprocess==0.1.1
+greenlet==0.4.0
+wsgiref==0.1.2
