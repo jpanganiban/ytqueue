@@ -5,7 +5,7 @@ from gevent.wsgi import WSGIServer
 from gevent import queue
 import gevent_subprocess as subprocess
 import gevent
-
+import argparser
 
 app = Flask(__name__)
 
@@ -34,7 +34,7 @@ def api_playlist():
 
 
 # Worker that plays the playlist
-def player_worker():
+def player_worker(args):
     while True:
         # Fetch the most recent item in the queue.
         # Blocks the current greenlet until either
@@ -50,7 +50,11 @@ def player_worker():
             # the gevent_subprocess module. Blocks only
             # this greenlet until the process (playlist
             # item) ends.
-            subprocess.call(["vlc", "--play-and-exit", "--quiet", "--fullscreen", pl_item])
+            command = ["vlc", pl_item, "--play-and-exit", "--quiet"]
+            if args.fullscreen:
+                command.append("--fullscreen")
+
+            subprocess.call(command)
 
         except queue.Empty:
             # Resume loop
@@ -59,12 +63,17 @@ def player_worker():
 
 if __name__ == '__main__':
 
+    # get value from command line arguments
+    args = argparser.parse()
+
+    PORT = int(args.port)
+
     # Web server thread to be spawned later
-    server = WSGIServer(('0.0.0.0', 8000), app)
+    server = WSGIServer(('0.0.0.0', PORT), app)
     server_thread = gevent.spawn(server.serve_forever)
 
     # Player thread to be spawned later
-    player_thread = gevent.spawn(player_worker)
+    player_thread = gevent.spawn(player_worker, args)
 
     # Start the threads
     gevent.joinall([server_thread, player_thread])
