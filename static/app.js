@@ -55,7 +55,7 @@ function youtubeSearch(searchString, callback) {
  * Constructs a youtubeUrl based on a videoId
  */
 function constructVideoUrl(videoId) {
-  return "http://www.youtube.com/watch?v=" + videoId;
+  return "http://www.youtube.com/watch?v=" + videoId + "&vq=large";
 }
 
 
