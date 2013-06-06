@@ -50,7 +50,7 @@ def player_worker():
             # the gevent_subprocess module. Blocks only
             # this greenlet until the process (playlist
             # item) ends.
-            subprocess.call(["vlc", "--play-and-exit", "--quiet", pl_item])
+            subprocess.call(["vlc", "--play-and-exit", "--quiet", "--fullscreen", pl_item])
 
         except queue.Empty:
             # Resume loop
