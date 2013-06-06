@@ -1,0 +1,41 @@
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#search {
+  width: 100%;
+}
+
+#search .search-string {
+  width: 100%;
+  font-size: 2em;
+}
+
+#results {
+  padding: 0;
+}
+
+.result {
+  list-style: none;
+}
+
+.result:hover {
+  background-color: #333;
+  cursor: pointer;
+}
+
+.result .container {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.result .description,
+.result .title {
+  padding: 0px;
+  margin: 0px;
+}
+
+.result .thumbnail {
+  width: 250px;
+}
