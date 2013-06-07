@@ -2,41 +2,43 @@
 <html>
 <head>
   <title>Youtube Tayo</title>
-  <link rel=stylesheet href=/static/style.css>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+  <link rel=stylesheet href="/static/stylesheets/style.css">
+
 </head>
 <body>
 
-<div id=app>
-  <h1>Youtube Tayo</h1>
+<div class="container">
+  <h1>YouTubeTayo</span></h1>
 
-  <div id=loading>
+  <div id="loading">
     Loading...
   </div>
 
-  <form id=search>
-    <input class=search-string name=search-string type=text placeholder="Search">
+  <form id="search">
+    <input class="search-string name=search-string type=text" placeholder="Search">
   </form>
 
-  <ul id=results>
+  <ul id="results">
   </ul>
 </div>
 
 
-<script id=result type=text/html>
-  <li class=result data-video-id=<%= id.videoId %>>
-  <div class=container>
-    <img class=thumbnail data-video-id=<%= id.videoId %> src=<%= snippet.thumbnails.medium.url %>>
-  </div>
-  <div class=container>
-    <h2 class=title data-video-id=<%= id.videoId %>><%= snippet.title %></h2>
-    <p class=description data-video-id=<%= id.videoId %>><%= snippet.description %></h2>
-  </div>
-  </li>
+<script id="result" type="text/html">
+      <li class="result" data-video-id="<%= id.videoId %>">
+        <div class="result-wrapper">
+        <img class="thumbnail" data-video-id="<%= id.videoId %>" src='<%= snippet.thumbnails.medium.url %>'">
+    
+        <h2 class="title" data-video-id="<%= id.videoId %>"><%= snippet.title %></h2>
+        <p class="description" data-video-id="<%= id.videoId %>"><%= snippet.description %></p>
+        </div>
+      </li>
 </script>
 
-<script type=text/javascript src=/static/jquery.min.js></script>
-<script type=text/javascript src=/static/underscore.min.js></script>
-<script type=text/javascript src=/static/app.js></script>
-<script type=text/javascript src="https://apis.google.com/js/client.js?onload=gapiLoadCallback"></script>
+<script type="text/javascript" src="/static/javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="/static/javascripts/underscore.min.js"></script>
+<script type="text/javascript" src="/static/javascripts/app.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/client.js?onload=gapiLoadCallback"></script>
 </body>
 </html>

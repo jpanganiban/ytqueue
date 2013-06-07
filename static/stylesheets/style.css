@@ -1,6 +1,20 @@
+body{
+  font-family: 'Montserrat', 'Helvetica'
+}
+
+.container{
+  margin: 0px auto;
+  width: 589px;
+}
+
 h1 {
+  font-family: 'Oswald';
   text-align: center;
-  font-size: 1.5em;
+  font-size: 4.5em;
+}
+
+#tayo{
+  font-family: 'Montserrat', 'Helvetica'
 }
 
 #search {
@@ -8,6 +22,7 @@ h1 {
 }
 
 #search .search-string {
+  font-family: 'Oswald';
   width: 100%;
   font-size: 2em;
 }
@@ -16,13 +31,21 @@ h1 {
   padding: 0;
 }
 
+.result-wrapper{
+  width: 523px;
+}
+
 .result {
   list-style: none;
+  padding: 2em;
+  background: #eee;
+  border: 1px solid #bbb;
 }
 
 .result:hover {
   background-color: #333;
   cursor: pointer;
+  color: #fff;
 }
 
 .result .container {
@@ -37,5 +60,5 @@ h1 {
 }
 
 .result .thumbnail {
-  width: 250px;
+  width: 100%;
 }
