@@ -2,26 +2,38 @@
 <html>
 <head>
   <title>Youtube Tayo</title>
-  <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+
+  <meta content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5" name="viewport">
+  <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-  <link rel=stylesheet href="/static/stylesheets/style.css">
+  <link rel="stylesheet" href="/static/stylesheets/wobble.css">
+  <link rel="stylesheet" href="/static/stylesheets/style.css">
+
+<!--   <link rel=stylesheet href="/static/stylesheets/styles.css">
+  <link rel="stylesheet" href="/static/stylesheets/fancyInput.css"> -->
+  
+ 
 
 </head>
 <body>
-
+<div class="wrapper">
 <div class="container">
-  <h1>YouTubeTayo</span></h1>
-
+  <h1>You<span id="tube">Tube</span>Tayo</h1>
+  <p style="text-align: center; border-top: 1px solid; border-bottom: 1px solid; letter-spacing: 6px;">Share music with your coworkers.</p>
   <div id="loading">
     Loading...
   </div>
-
+  
+  
   <form id="search">
-    <input class="search-string name=search-string type=text" placeholder="Search">
+    <div class="mask-search">
+      <input class="search-string fancyInput name=search-string type=text" placeholder="Search">
+      <input type="submit">
+    </div>
   </form>
-
   <ul id="results">
   </ul>
+</div>
 </div>
 
 
@@ -37,6 +49,9 @@
 </script>
 
 <script type="text/javascript" src="/static/javascripts/jquery.min.js"></script>
+<script>
+  $('#tube').addClass('animated wobble');
+</script>
 <script type="text/javascript" src="/static/javascripts/underscore.min.js"></script>
 <script type="text/javascript" src="/static/javascripts/app.js"></script>
 <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=gapiLoadCallback"></script>

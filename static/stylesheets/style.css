@@ -1,34 +1,132 @@
 body{
-  font-family: 'Montserrat', 'Helvetica'
+  font-family: 'Montserrat', 'Helvetica';
+  background-image:url('/static/img/darkcloth.png');
+  color: white;
+}
+
+#tube{
+  background: rgb(194, 0, 0);
+  padding: 9px 13px 0px 7px;
+  margin: 3px;
+  -webkit-border-radius: 27px;  
+  -moz-border-radius: 27px;
+  border-radius: 27px;
+
+  display: inline-block;
+
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+
+
+  -moz-animation-duration: 3s;
+  -moz-animation-delay: 2s;
+  -moz-animation-iteration-count: infinite;
+
+
+  -o-animation-duration: 3s;
+  -o-animation-delay: 2s;
+  -o-animation-iteration-count: infinite;
+
+
+  -ms-animation-duration: 3s;
+  -ms-animation-delay: 2s;
+  -ms-animation-iteration-count: infinite;
+}
+
+.wrapper{
+  min-width: 620px;
 }
 
 .container{
-  margin: 0px auto;
   width: 589px;
+  margin: 0px auto;
 }
 
 h1 {
-  font-family: 'Oswald';
+  font-family: 'Fjalla One';
   text-align: center;
-  font-size: 4.5em;
-}
-
-#tayo{
-  font-family: 'Montserrat', 'Helvetica'
+  font-size: 6em;
+  margin-bottom: -10px;
 }
 
 #search {
   width: 100%;
 }
 
-#search .search-string {
-  font-family: 'Oswald';
-  width: 100%;
-  font-size: 2em;
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+}
+
+.mask-search{
+  height: 82px;
+  overflow: hidden;
+}
+
+
+input {
+
+  font-family: 'Montserrat', Helvetica;
+  font-size: 3em;
+  width: 80%;
+  text-indent: 30px;
+  padding: 11px 0;
+  background-color: rgb(107, 107, 107);
+  border: 0;
+  color: white;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+
+}
+
+
+
+input[type="submit"]{
+  position: absolute;
+  background-image: url("http://designmodo.com/demo/dropdown-menu-search/search.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Fjalla One';
+  font-size: 3em;
+  width: 117px;
+  text-indent: -9999px;
+  overflow: hidden;
+  padding: 10px 0;
+  background-color: rgb(107, 107, 107);
+  border: 0;
+  color: white;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+
+}
+
+input:focus
+{ 
+  background-color: #aaa;
+  outline: none;
 }
 
 #results {
   padding: 0;
+  color: #111;
 }
 
 .result-wrapper{
@@ -39,7 +137,7 @@ h1 {
   list-style: none;
   padding: 2em;
   background: #eee;
-  border: 1px solid #bbb;
+  margin-bottom: 5px;
 }
 
 .result:hover {
