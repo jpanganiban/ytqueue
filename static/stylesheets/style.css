@@ -118,7 +118,7 @@ input[type="submit"]{
 
 }
 
-input:focus
+input:focus, input:hover
 { 
   background-color: #aaa;
   outline: none;
