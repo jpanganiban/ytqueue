@@ -2,8 +2,7 @@
 
 from flask import Flask, render_template, redirect, request
 from gevent.wsgi import WSGIServer
-from gevent import queue
-import gevent_subprocess as subprocess
+from gevent import queue, subprocess
 import gevent
 import argparser
 
@@ -51,10 +50,13 @@ def player_worker(args):
             # this greenlet until the process (playlist
             # item) ends.
             command = ["vlc", pl_item, "--play-and-exit", "--quiet"]
+            print command
             if args.fullscreen:
                 command.append("--fullscreen")
 
+            print "cool"
             subprocess.call(command)
+            print "wat"
 
         except queue.Empty:
             # Resume loop
